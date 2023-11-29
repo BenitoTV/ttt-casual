@@ -1,6 +1,5 @@
 volumes:
   TTTDev:
-  FastDL:
 
 services:
   game:
@@ -13,13 +12,3 @@ services:
       SERVER_VOICE_ENABLE: 0
     volumes:
       - TTTDev:/home/steam/serverfiles
-fastdl:
-  image: nginx
-  volumes:
-   - ./templates:/etc/nginx/templates
-   - FastDL:/var/
-  ports:
-   - "8080:80"
-  environment:
-   - NGINX_HOST=fastdl.bxnto.de
-   - NGINX_PORT=80
